@@ -46,4 +46,8 @@ object Person {
       new Person(firstName, lastName, age)
     }
   }
+
+  object Builder {
+    def apply() = new Builder[BuildStep]()
+  }
 }

@@ -1,9 +1,9 @@
 package com.github.rinot.creational.builder.javalike
 
 class Person(builder: Person.Builder) {
-  val firstName = builder.firstName
-  val lastName  = builder.lastName
-  val age       = builder.age
+  val firstName: String = builder.firstName
+  val lastName: String  = builder.lastName
+  val age: Int          = builder.age
 }
 
 object Person {
