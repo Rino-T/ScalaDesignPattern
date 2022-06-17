@@ -1,4 +1,4 @@
-package com.github.rinot.creational.builder.javalike
+package com.github.rinotc.creational.builder.javalike
 
 class Person(builder: Person.Builder) {
   val firstName: String = builder.firstName

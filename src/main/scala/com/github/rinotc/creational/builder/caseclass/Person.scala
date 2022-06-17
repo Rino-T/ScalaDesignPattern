@@ -1,4 +1,4 @@
-package com.github.rinot.creational.builder.caseclass
+package com.github.rinotc.creational.builder.caseclass
 
 case class Person(
     firstName: String = "",

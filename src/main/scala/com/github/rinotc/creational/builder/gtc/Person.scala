@@ -1,4 +1,4 @@
-package com.github.rinot.creational.builder.gtc
+package com.github.rinotc.creational.builder.gtc
 
 class Person(
     val firstName: String,
