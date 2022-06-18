@@ -12,7 +12,7 @@ class Person(
 object Person {
   sealed trait BuildStep
   sealed trait HasFirstName extends BuildStep
-  sealed trait HasLastNmae  extends BuildStep
+  sealed trait HasLastName  extends BuildStep
 
   class Builder[PassedStep <: BuildStep] private (
       var firstName: String,
@@ -32,9 +32,9 @@ object Person {
       new Builder[HasFirstName](this)
     }
 
-    def setLastName(lastName: String)(implicit ev: PassedStep =:= HasFirstName): Builder[HasLastNmae] = {
+    def setLastName(lastName: String)(implicit ev: PassedStep =:= HasFirstName): Builder[HasLastName] = {
       this.lastName = lastName
-      new Builder[HasLastNmae](this)
+      new Builder[HasLastName](this)
     }
 
     def setAge(age: Int): Builder[PassedStep] = {
@@ -42,7 +42,7 @@ object Person {
       this
     }
 
-    def build(implicit ev: PassedStep =:= HasLastNmae): Person = {
+    def build(implicit ev: PassedStep =:= HasLastName): Person = {
       new Person(firstName, lastName, age)
     }
   }
